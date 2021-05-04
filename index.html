@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- fix bug favicon icon request -->
+    <link rel="shortcut icon" href="#">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <!-- custom CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <title>DomDom - Make Your Shop Easier!</title>
+</head>
+
+<body data-spy="scroll" data-target="#navbarResponsive" onload="loadDoc()">
+
+    <!-- Start Home Section -->
+    <div id="home">
+        <!-- Navigation -->
+        <header class="">
+            <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+                <a href="index.html" class="navbar-brand"><img src="images/logo1.png"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li><a href="#home" class="nav-link">Home</a></li>
+                        <li><a href="#Shop" class="nav-link">Shop</a></li>
+                        <li class="shoppingcart" style="cursor: pointer;"><i class='fa fa-shopping-cart cart'></i></li>
+                        <li style="margin-top: 23px;margin-left: 15px;"><img class="profile-pic" src="images/profile.jpg" id="photo"></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Carousel -->
+        <div id="carouselExampleIndicator" class="carousel slide" data-ride="carousel" data-interval="7000">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicator" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicator" data-slide-to="1" class="active"></li>
+                <li data-target="#carouselExampleIndicator" data-slide-to="2" class="active"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <!-- Slide 1 -->
+                <div class="carousel-item active" style="background-image: url(images/slider_image_1.jpg);">
+                    <div class="carousel-caption text-center">
+                        <h1>Welcome to DomDom</h1>
+                        <h3>Make Your Shop Easier!</h3>
+                        <a class="btn btn-outline-light btn-lg" href="#Shop">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item" style="background-image: url(images/slider_image_2.jpg);">
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="carousel-item" style="background-image: url(images/slider_image_3.jpg);">
+                </div>
+            </div>
+
+            <!-- Prev & Next Buttons -->
+            <a href="#carouselExampleIndicator" class="carousel-control-prev" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </a>
+
+            <a href="#carouselExampleIndicator" class="carousel-control-next" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </a>
+
+        </div>
+
+    </div>
+    <!-- End Home Section -->
+
+
+
+    <!-- Start Shop Header Section -->
+    <div id="Shop" class="offset">
+
+        <div class="col-12 narrow text-center">
+            <h1>Welcome to The Shop</h1>
+        </div>
+
+    </div>
+    <!-- End Shop Header Section -->
+
+    <!-- Start Sort Section -->
+    <select id="sort" style="float: right;margin-top: 15px;" onchange="sort()">
+        <option value="price asc">Ascending</option>
+        <option value="price desc">Descending</option>
+        <option value="id desc">newest</option>
+      </select>
+    <!-- End Sort Section -->
+
+
+    <!-- Start Search bar Section -->
+    <div class="search-container">
+
+        <input type="text" placeholder="Search.." id="name" onkeydown="search()">
+        <button type="submit" onclick="searchdata()"><i class="fa fa-search"></i></button>
+
+    </div>
+    <!-- End Search bar Section -->
+
+
+
+    <!-- Start Shop Section -->
+    <div id="shoppinglist" class="offset">
+        <section>
+            <div class="row no-padding" id="shopping">
+                <div class="col-md-4">
+                    <div class="product-item">
+                        <img class="addcart" src="images/product-1-370x270.jpg" alt="">
+                        <div class="down-content">
+                            <h4>Lorem ipsum dolor sit amet.</h4>
+                            <h6><small><del>$999.00 </del></small> $779.00</h6>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dicta voluptas quia dolor fuga odit.</p>
+                        </div>
+                        <span class="addcart"></span>
+                        <button class="addcartbutton">Add-cart</button>
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+                    <div class="product-item">
+                        <img class="addcart" src="images/product-2-370x270.jpg" alt="">
+                        <div class="down-content">
+                            <h4>Lorem ipsum dolor sit amet.</h4>
+                            <h6><small><del>$99.00</del></small> $79.00</h6>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non beatae soluta, placeat vitae cum maxime culpa itaque minima.</p>
+                        </div>
+                        <span class="addcart"></span>
+                        <button class="addcartbutton">Add-cart</button>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="product-item">
+                        <img class="addcart" src="images/product-3-370x270.jpg" alt="">
+                        <div class="down-content">
+                            <h4>Lorem ipsum dolor sit amet.</h4>
+                            <h6><small><del>$1999.00</del></small> $1779.00</h6>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt nisi quia aspernatur, harum facere delectus saepe enim?</p>
+                        </div>
+                        <span class="addcart"></span>
+                        <button class="addcartbutton">Add-cart</button>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="product-item">
+                        <img class="addcart" src="images/product-4-370x270.jpg" alt="">
+                        <div class="down-content">
+                            <h4>Lorem ipsum dolor sit amet.</h4>
+                            <h6><small><del>$999.00 </del></small> $779.00</h6>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dicta voluptas quia dolor fuga odit.</p>
+                        </div>
+                        <span class="addcart"></span>
+                        <button class="addcartbutton">Add-cart</button>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="product-item">
+                        <img class="addcart" src="images/product-5-370x270.jpg" alt="">
+                        <div class="down-content">
+                            <h4>Lorem ipsum dolor sit amet.</h4>
+                            <h6><small><del>$999.00 </del></small> $779.00</h6>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dicta voluptas quia dolor fuga odit.</p>
+                        </div>
+                        <span class="addcart"></span>
+                        <button class="addcartbutton">Add-cart</button>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="product-item">
+                        <img class="addcart" src="images/product-6-370x270.jpg" alt="">
+                        <div class="down-content">
+                            <h4>Lorem ipsum dolor sit amet.</h4>
+                            <h6><small><del>$999.00 </del></small> $779.00</h6>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dicta voluptas quia dolor fuga odit.</p>
+                        </div>
+                        <span class="addcart"></span>
+                        <button class="addcartbutton">Add-cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="selectaddcard">
+
+
+
+    </div>
+    <!-- End Shop Section -->
+
+
+
+
+
+    <!-- Start Contact Section -->
+    <div id="contact" class="offset">
+        <footer>
+            <div class="row justify-content-center">
+
+                <div class="col-md-5 text-center">
+                    <img src="images/logo1.png" class="foot">
+                    <!-- <p>At our core is a collection of design and development solutions that represent everything your business needs to compete in the modern marketplace.</p>
+                    <strong>Contact Info</strong>
+                    <p>(888) 888-8888<br>email@hans.com</p> -->
+                    <p></p>
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+
+                <hr class="socket"> &copy; COPYRIGHT 2021 DomDom
+            </div>
+        </footer>
+    </div>
+    <!-- End Contact Section -->
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="getdata.js"></script>
+    <!-- <script type="text/javascript" src="savecart.js"></script> -->
+
+
+    <!-- Icons -->
+    <script src="https://use.fontawesome.com/releases/v5.6.1/js/all.js"></script>
+</body>
+
+</html>
